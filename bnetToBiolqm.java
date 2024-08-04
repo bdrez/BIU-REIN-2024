@@ -42,27 +42,26 @@ public class bnetToBiolqm  {
 
             while (geneMatch.find()){
                 geneFactors.add(geneMatch.group());
+                
             }
 
         }
 
-        //Here we check if the target do not have contain the factors 
+        //Here we check if the target set is missing any of the genes from the factor side, if so we add them to the end and set it 
+        //equal to itself 
         for (String gene : geneFactors) {
             if (!geneTargets.contains(gene)) {
                 bnetWriter.write(gene + ", " + gene);
                 bnetWriter.newLine();
-                //extraFactors.add(gene);
             }
         }
 
-        System.out.println("targets" +geneTargets);
-        System.out.println("factor" +geneFactors);
+
+        //uncomment if you want to check if the genes and factors converted correctly or if you want to see the output on your screen
+        //System.out.println("targets" +geneTargets);
+        //System.out.println("factor" +geneFactors);
 
         bnetWriter.close();
-        //System.out.println("missed targ"+ extraFactors);
-
-        // add all the defined targets to a set, and then go through each stnence and look at the factor if
-        //their not in the set then we can add either to the next line or at the end equal to itself?
 
     }
 
