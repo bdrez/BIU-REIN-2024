@@ -16,24 +16,27 @@ public class bnetToBiolqm  {
         BufferedWriter bnetWriter = new BufferedWriter(new FileWriter(newBnetFilePath));
         Scanner sc = new Scanner(file);
 
-        //Takes in the first sentence and make a space between the two words.
+        //Takes in the first sentence and make a space after the comma
         String line=sc.nextLine();
         line=line.replace(",",", ");
         bnetWriter.write(line);
         bnetWriter.newLine();
 
         System.out.println(line);
-
+        
+        //create two sets one for the targets and one for the genes
         HashSet<String> geneTargets = new HashSet<>();
         HashSet<String> geneFactors= new HashSet<>();
-        //HashSet<String> extraFactors = new HashSet<>();
+
+        //goes through gene factors/ logical statements and adds genes in the factor column to a hashset and genes in the 
+        // target column to a hashset
         while (sc.hasNextLine()){
             String lines=sc.nextLine();
             bnetWriter.write(lines);
             bnetWriter.newLine();
             String splitLines[]=lines.split(",");
             geneTargets.add(splitLines[0].trim());
-            //now we go through the second part of the split and if something start with v_ add it
+            
             Pattern genePattern = Pattern.compile("v_[a-zA-Z0-9_]+");
             Matcher geneMatch = genePattern.matcher(splitLines[1]);
 
@@ -43,6 +46,7 @@ public class bnetToBiolqm  {
 
         }
 
+        //Here we check if the target do not have contain the factors 
         for (String gene : geneFactors) {
             if (!geneTargets.contains(gene)) {
                 bnetWriter.write(gene + ", " + gene);
