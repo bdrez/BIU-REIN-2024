@@ -9,4 +9,7 @@ The goal of this project is to convert a BNET and AEON files from the [biodivine
 
 - I. The first tool requires you to input the path to the BNET file from GitHub into the code. It then automates the creation of a file that can be imported into bioLQM to determine the fixpoints of the model.
 
+- II. The second tool 
+II. The second tool works by comparing optional interactions in a .rein file and a corresponding excel file which contains numbers indicating how confident we are that an optional interaction will occur. It then prompts the user for the number of new filtered out .rein files they want. Based on this number and the number of optional interactions present in the original .rein file, our program calculates threshold numbers that will output a gradually decreasing (and uniform) number of optional interactions in each new output .rein file it creates. Our program also outputs a text file of commands to input into RE:IN so that they can be tested.
+
 
