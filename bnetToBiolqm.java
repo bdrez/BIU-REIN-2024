@@ -7,6 +7,7 @@ public class bnetToBiolqm  {
     
 
     public static void main(String[] args) throws FileNotFoundException, IOException{
+        // we take in a downloaded bnet file
         File file = new File("C:\\Users\\blimy\\OneDrive\\Desktop\\demo11.bnet");
         String newBnetFilePath = "C:\\Users\\blimy\\Downloads\\outputFile2.bnet";
         BufferedWriter bnetWriter = new BufferedWriter(new FileWriter(newBnetFilePath));
