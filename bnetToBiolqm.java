@@ -7,13 +7,16 @@ public class bnetToBiolqm  {
     
 
     public static void main(String[] args) throws FileNotFoundException, IOException{
-        // we take in a downloaded bnet file
+        // we take in a downloaded bnet file- change to the correct path
         File file = new File("C:\\Users\\blimy\\OneDrive\\Desktop\\demo11.bnet");
+        
+        // this is where the new file will output to -change to the correct path
         String newBnetFilePath = "C:\\Users\\blimy\\Downloads\\outputFile2.bnet";
+        
         BufferedWriter bnetWriter = new BufferedWriter(new FileWriter(newBnetFilePath));
         Scanner sc = new Scanner(file);
 
-        //take in the first sentence and make a space between
+        //Takes in the first sentence and make a space between the two words.
         String line=sc.nextLine();
         line=line.replace(",",", ");
         bnetWriter.write(line);
