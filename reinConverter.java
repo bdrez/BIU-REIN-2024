@@ -13,12 +13,12 @@ public class aeonReader {
         List<String[]> relationships = new ArrayList<>();
         String[] geneList = new String[0];
 
+        //take in a downloaded aeon file
         File aeonFile = new File("C:\\Users\\blimy\\OneDrive\\Desktop\\demo11.aeon");
-        //"C:\Users\blimy\OneDrive\Desktop\model7.txt"
-        //File file = new File ("C:\\Users\\blimy\\OneDrive\\Desktop\\model5.txt");
+        //take in the fixpoint file (the output from the bioLQM)
         File fixpointFile = new File( "C:\\Users\\blimy\\OneDrive\\Desktop\\fixpointOutput.txt");
 
-
+        //create a path 
         String newReinFilePath = "C:\\Users\\blimy\\OneDrive\\Desktop\\outputFile.rein";
         BufferedWriter reinWriter = new BufferedWriter(new FileWriter(newReinFilePath));
 
