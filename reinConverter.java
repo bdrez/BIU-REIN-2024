@@ -8,11 +8,11 @@ import java.io.*;
 public class aeonReader {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        
         Set<String> genes = new HashSet<>();
         List<String[]> relationships = new ArrayList<>();
         String[] geneList = new String[0];
 
-        //File file = new File("C:\\Users\\blimy\\OneDrive\\Desktop\\modle3.txt");
         File aeonFile = new File("C:\\Users\\blimy\\OneDrive\\Desktop\\demo11.aeon");
         //"C:\Users\blimy\OneDrive\Desktop\model7.txt"
         //File file = new File ("C:\\Users\\blimy\\OneDrive\\Desktop\\model5.txt");
