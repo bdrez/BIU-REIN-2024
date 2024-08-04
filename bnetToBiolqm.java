@@ -4,10 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class bnetToBiolqm  {
-    //make a code the automates the bnet file to be put into the biolqm
-    //check for v_ and make sure their all defined , if not add at the end and define it
-    //if there's a comma with no space after, add a space
-    // add all genes to a hashset. If the gene isn't in the target column, add gene, gene
+    
 
     public static void main(String[] args) throws FileNotFoundException, IOException{
         File file = new File("C:\\Users\\blimy\\OneDrive\\Desktop\\demo11.bnet");
