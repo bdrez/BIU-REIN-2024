@@ -5,7 +5,7 @@ import java.io.*;
 
 
 
-public class aeonReader {
+public class reinConverter {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
