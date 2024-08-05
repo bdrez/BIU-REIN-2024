@@ -17,12 +17,12 @@ The goal of this project is to convert a BNET and AEON files from the [biodivine
 # Instructions
 -Download the AEON and BNET file from the desired [biodivine-boolean-models repository on GitHub](https://github.com/sybila/biodivine-boolean-models) and save them.
 
--Run the bnetToBiolqm.java code and select the BNET file from the GUI to convert it. Then, in the second GUI, select/ create an output file for the converted BNET file in the desired output location. 
+-Run the bnetToBiolqmGUI.java code and select the BNET file from the GUI to convert it. Then, in the second GUI, select/ create an output file for the converted BNET file in the desired output location. 
 
 -Open bioLQM in the terminal and ensure you have java version 8 downloaded (java -version) then make sure you are in the correct directory and enter java -jar bioLQM-0.6.1.jar then enter java -jar bioLQM-0.6.1.jar -if bnet "C:\Users\blimy\Downloads\demo0.bnet" -r fixpoints > "C:\Users\blimy\Downloads\fixpointOutput.txt" but replace the bnet file path and the output file path to the your desired path (you can enter this code and stop after fixpoints to see the fixpoints in the terminal.) 
 
 -Open the output file with the fixpoints, and save it in encoding **UTF-8**
 
--Run the reinConverter.java code and select the AEON file from the GUI, then select the newly converted fixpoint file from the second GUI, and then select/ create an output rein file in the desired output location.
+-Run the reinConverterGUI.java code and select the AEON file from the GUI, then select the newly converted fixpoint file from the second GUI, and then select/ create an output rein file in the desired output location.
 
 -Take the new output file and load it to the Reasoning Engine to see the results.
