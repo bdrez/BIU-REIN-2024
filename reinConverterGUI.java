@@ -36,7 +36,6 @@ public class reinConverterGUI {
                     String newReinFilePath = reinFile.getAbsolutePath();
                     BufferedWriter reinWriter = new BufferedWriter(new FileWriter(newReinFilePath));
 
-                    // Process AEON file
                     Scanner sc = new Scanner(aeonFile);
                     while (sc.hasNextLine()) {
                         String line = sc.nextLine();
@@ -56,13 +55,13 @@ public class reinConverterGUI {
                     }
                     sc.close();
 
-                    // Write genes to REIN file
+                    // Write the genes into the REIN file
                     for (String gene : genes) {
                         reinWriter.write(gene + " (0..17); ");
                     }
                     reinWriter.newLine();
 
-                    // Prompt user for interaction options
+                    // give the user option to make all interaction optional 
                     Scanner user = new Scanner(System.in);
                     System.out.println("Would you like to make all interactions optional? (yes/no)");
                     String answer = user.nextLine();
@@ -123,7 +122,7 @@ public class reinConverterGUI {
 
                     reinWriter.newLine();
 
-                    // Write experiments to REIN file
+                    // Write experiments into REIN file
                     for (int i = 1; i <= lineCount; i++) {
                         reinWriter.newLine();
                         reinWriter.write("//Experiment " + i);
