@@ -15,7 +15,7 @@ The goal of this project is to convert a BNET and AEON files from the [biodivine
 
 -------
 # Instructions
--Download the AEON and BNET file from the desireded [biodivine-boolean-models repository on GitHub](https://github.com/sybila/biodivine-boolean-models) and save them.
+-Download the AEON and BNET file from the desired [biodivine-boolean-models repository on GitHub](https://github.com/sybila/biodivine-boolean-models) and save them.
 
 -Run the bnetToBiolqm.java code and select the BNET file from the GUI to convert it. Then, in the second GUI, select/ create an output file for the converted BNET file in the desired output location. 
 
