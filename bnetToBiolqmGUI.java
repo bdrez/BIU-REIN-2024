@@ -11,14 +11,14 @@ public class bnetToBiolqmGUI {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
 
-        // Prompt user to select the input BNET file
+        // ask the user to select the input BNET file
         System.out.println("Please select the BNET file:");
         int bnetFile = fileChooser.showOpenDialog(null);
         if (bnetFile == JFileChooser.APPROVE_OPTION) {
             File inputFile = fileChooser.getSelectedFile();
             String inputFilePath = inputFile.getAbsolutePath();
 
-            // Prompt user to select the output BNET file location
+            // ask the user to select the output BNET file location
             System.out.println("Please select the output BNET file location:");
             fileChooser.setSelectedFile(new File("outputFile.bnet"));
             bnetFile = fileChooser.showSaveDialog(null);
